@@ -1,9 +1,8 @@
 pipeline {
-  agent none
+  agent {
+    docker 'circleci/node:9.3-stretch-browsers'
+  }
   stages {
-    agent {
-      docker 'circleci/node:9.3-stretch-browsers'
-    }
     stage('Fetch dependencies') {
       steps {
         sh 'npm install'
