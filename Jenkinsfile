@@ -5,6 +5,7 @@ pipeline {
   stages {
     stage('Fetch dependencies') {
       steps {
+        sh 'node --version'
         sh 'npm install'
         sh 'npm install -g @angular/cli'
       }
