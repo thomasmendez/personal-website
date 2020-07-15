@@ -10,8 +10,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'ng test --no-watch --no-progress --browsers=ChromeHeadlessCI'
-        sh 'ng e2e --protractor-config=e2e/protractor-ci.conf.js'
+        sh 'npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI'
+        sh 'npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js'
       }
     }
   }
