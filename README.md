@@ -1,27 +1,38 @@
-# PersonalWebsite
+# Personal Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Personal Website made with Angular 10.0.2
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project contains Jenkins and Docker files for CI/CD for longterm use. 
 
-## Code scaffolding
+## Built With
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The personal website was built with
 
-## Build
+Frontend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* [Angular](https://angular.io/) - Structural Framework
+* [Bootstrap](https://getbootstrap.com/) - CSS Framework
 
-## Running unit tests
+Unit Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [Jasmine](https://mochajs.org/) - JavaScript Test Framework
+* [Karma](https://www.chaijs.com/) -  BDD / TDD Assertion Library
 
-## Running end-to-end tests
+CI/CD
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* [Docker](https://www.docker.com/) - Containerization Tool 
+* [Jenkins](https://www.jenkins.io/) - Automation Server 
 
-## Further help
+Ubuntu Server Software
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* [NGINIX](https://www.nginx.com/) - Web Server
+
+## Authors
+
+* **Thomas Antonio Mendez** - *Initial work* 
+
+## License
+
+Personal Website is under the MIT License - see the [LICENSE](https://github.com/thomasmendez/personal-website/blob/master/LICENSE) file for details
