@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image {'circleci/node:9.3-stretch-browsers'} }
+    docker { image 'circleci/node:9.3-stretch-browsers' }
   }
   stages {
     stage('Fetch dependencies') {
