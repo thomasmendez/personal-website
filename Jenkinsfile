@@ -6,7 +6,6 @@ pipeline {
     stage('Fetch dependencies') {
       steps {
         sh 'npm install'
-        sh 'sudo npm install -g @angular/cli'
       }
     }
     stage('Test') {
