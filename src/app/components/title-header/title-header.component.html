@@ -1,0 +1,10 @@
+<div class="container-fluid" id="title-header">
+    <div *ngIf="isHome; else noImage">
+        <img class="rounded-circle" alt="100x100" src="assets/pic.png">
+        <h1>Thomas A Mendez</h1>
+        <h3 class="light-text">Software Engineer <br> and Game Developer</h3>
+    </div>
+    <ng-template #noImage>
+        <h1>{{ title }}</h1>
+    </ng-template>
+</div>

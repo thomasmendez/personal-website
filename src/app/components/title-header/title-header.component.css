@@ -1,0 +1,21 @@
+.container-fluid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#title-header {
+    background-color: #f5f8fa;
+    text-align: center;
+}
+
+img {
+    padding: 20px;
+}
+
+.h3 {
+    size: 1.5rem;
+}
+
+.light-text {
+    color: #aaa;
+}

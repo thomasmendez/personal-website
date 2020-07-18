@@ -1,0 +1,35 @@
+<div>
+    <app-title-header
+        [title]="title"
+    ></app-title-header>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            
+            <h3><u>Skills</u></h3>
+
+            <div *ngFor="let item of skills | keyvalue:keepOriginalOrder">
+                <ul>
+                    <li>
+                        {{item.key}}: {{item.value}}
+                    </li>
+                </ul>
+                
+            </div>
+        
+            <h3><u>Tools</u></h3>
+
+            <div *ngFor="let item of tools | keyvalue:keepOriginalOrder">
+                <ul>
+                    <li>
+                        {{item.key}}: {{item.value}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+</div>

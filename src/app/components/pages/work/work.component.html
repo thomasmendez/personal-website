@@ -1,0 +1,27 @@
+<div>
+    <app-title-header
+        [title]="title"
+    ></app-title-header>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="row work" *ngFor="let work of jobs">
+                <div class="col-sm-9">
+                    <p><strong>{{work.jobTitle}}</strong> at <em>{{work.company}}</em> {{work.city}}, {{work.state}}</p>
+                    <p>Job Title: {{work.jobRole}}</p>
+                    <ul>
+                        <li *ngFor="let duty of work.jobDuties">
+                            {{duty}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>{{work.startDate}} - {{work.endDate}}</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+</div>

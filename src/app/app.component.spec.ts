@@ -26,10 +26,9 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('personal-website');
   });
 
-  it('should render title', () => {
+  it('should have app-navbar', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('personal-website app is running!');
-  });
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-navbar')).not.toBe(null);
+  }));
 });
