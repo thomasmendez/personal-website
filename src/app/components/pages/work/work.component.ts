@@ -51,7 +51,7 @@ export class WorkComponent implements OnInit {
       {
         jobTitle:"Video Game Development for Research",
         company:"SAGA Lab",
-        city:"SAGA Lab,",
+        city:"Austin,",
         state:"Texas",
         startDate:"January 2018",
         endDate:"May 2018",
