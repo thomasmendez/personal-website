@@ -7,26 +7,21 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             
-            <h3><u>Skills</u></h3>
+            <h3 class="header" id="header-skills"><u>Skills</u></h3>
 
-            <div *ngFor="let item of skills | keyvalue:keepOriginalOrder">
-                <ul>
-                    <li>
-                        {{item.key}}: {{item.value}}
-                    </li>
-                </ul>
-                
-            </div>
+            <ul class="content" id="content-skills">
+                <li *ngFor="let item of skills | keyvalue:keepOriginalOrder">
+                    {{item.key}}: {{item.value}}
+                </li>
+            </ul>
         
-            <h3><u>Tools</u></h3>
+            <h3 class="header" id="header-tools"><u>Tools</u></h3>
 
-            <div *ngFor="let item of tools | keyvalue:keepOriginalOrder">
-                <ul>
-                    <li>
-                        {{item.key}}: {{item.value}}
-                    </li>
-                </ul>
-            </div>
+            <ul class="content" id="content-tools">
+                <li *ngFor="let item of tools | keyvalue:keepOriginalOrder">
+                    {{item.key}}: {{item.value}}
+                </li>
+            </ul>
 
         </div>
         <div class="col-sm-3"></div>
