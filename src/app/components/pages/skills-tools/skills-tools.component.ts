@@ -27,7 +27,7 @@ export class SkillsToolsComponent implements OnInit {
 
     this.tools = {
       "Game Engines": ["Unity"],
-      "Programming Languaes": ["Python", " C#", " Swift", " Java"],
+      "Programming Languages": ["Python", " C#", " Swift", " Java"],
       "Front-End": ["HTML", " CSS", " Javascript", " ES6", " React.js", " Webpack", " Babel", " Angular", " Bootstrap", " Pug"],
       "Back-End": ["Node.js", " PHP", " Flask", " SQLAlchemy"],
       "Databases": ["MySQL", " PL/SQL", " Postgres", " MongoDB"],
