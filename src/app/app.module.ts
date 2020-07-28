@@ -12,6 +12,7 @@ import { AboutMeComponent } from './components/pages/home/about-me/about-me.comp
 import { ContactComponent } from './components/pages/home/contact/contact.component';
 import { WorkComponent } from './components/pages/work/work.component';
 import { SkillsToolsComponent } from './components/pages/skills-tools/skills-tools.component';
+import { SoftwareProjectsComponent } from './components/pages/software-projects/software-projects.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SkillsToolsComponent } from './components/pages/skills-tools/skills-too
     AboutMeComponent,
     ContactComponent,
     WorkComponent,
-    SkillsToolsComponent
+    SkillsToolsComponent,
+    SoftwareProjectsComponent
   ],
   imports: [
     BrowserModule,
