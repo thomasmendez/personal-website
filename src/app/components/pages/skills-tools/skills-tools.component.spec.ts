@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SkillsToolsComponent } from './skills-tools.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('SkillsToolsComponent', () => {
   let component: SkillsToolsComponent;
@@ -8,7 +9,8 @@ describe('SkillsToolsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillsToolsComponent ]
+      declarations: [ SkillsToolsComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
@@ -22,4 +24,9 @@ describe('SkillsToolsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain title header', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-title-header')).not.toBe(null);
+  })
 });
