@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { WorkComponent } from './work.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -9,6 +10,7 @@ describe('WorkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ RouterTestingModule ],
       declarations: [ WorkComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
