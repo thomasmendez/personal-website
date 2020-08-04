@@ -1,0 +1,12 @@
+version: '3'
+services:
+  website:
+    container_name: personal-website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4201:4200'
