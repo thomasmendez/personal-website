@@ -1,0 +1,12 @@
+version: '3'
+services:
+  website-prod:
+    container_name: personal-website-prod
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '80:80'
