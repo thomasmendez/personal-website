@@ -33,8 +33,8 @@ describe('SoftwareProjectsComponent', () => {
   })
 
   it("component should contain title 'Software Engineering Projects'", () => {
-    const work = fixture.debugElement.componentInstance;
-    expect(work.title).toEqual('Software Engineering Projects');
+    const projects = fixture.debugElement.componentInstance;
+    expect(projects.title).toEqual('Software Engineering Projects');
   })
 
 });
