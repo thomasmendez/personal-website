@@ -1,14 +1,17 @@
 import { HomePage } from './pages/app.home';
 import { SkillsAndToolsPage } from './pages/app.skills-tools';
+import { SoftwareProjects } from './pages/app.software-projects';
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
   let home: HomePage;
   let skills_tools: SkillsAndToolsPage;
+  let software_projects: SoftwareProjects;
 
   beforeEach(() => {
     home = new HomePage();
     skills_tools = new SkillsAndToolsPage();
+    software_projects = new SoftwareProjects();
   });
 
   it('should have a About Me', () => {
@@ -34,6 +37,12 @@ describe('workspace-project App', () => {
     skills_tools.navigateTo();
     expect(skills_tools.getToolsHeader()).toEqual('Tools');
     expect(skills_tools.getToolsContent()).toBe(10); // li of tools is 10
+  })
+
+  it('should have Software Projects', () => {
+    software_projects.navigateTo();
+    expect(software_projects.getProjectHeader()).toBeTruthy();
+    expect(software_projects.getSkillsContent()).toBeGreaterThan(0);
   })
 
   afterEach(async () => {
