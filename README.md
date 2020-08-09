@@ -93,6 +93,10 @@ Use as base image in DockerFile
 FROM thomasmendez01/personal-website
 ```
 
+## Run Live Webserver
+
+To run the Angular app on a live webserver using Ansible follow the [Ansible setup instructions](https://github.com/thomasmendez/personal-website/blob/master/ANSIBLESETUP.md)
+
 ## Built With
 
 The personal website was built with
@@ -111,8 +115,9 @@ CI/CD
 
 * [Docker](https://www.docker.com/) - Containerization Tool 
 * [Jenkins](https://www.jenkins.io/) - Automation Server 
+* [Ansible](https://www.ansible.com/) - IT Automation Tool 
 
-Ubuntu Server Software
+Web Server
 
 * [NGINIX](https://www.nginx.com/) - Web Server
 
