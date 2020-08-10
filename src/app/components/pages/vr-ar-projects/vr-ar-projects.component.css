@@ -1,0 +1,30 @@
+img {
+    width:100%;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    border-radius: 0;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.button-holder {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.project {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

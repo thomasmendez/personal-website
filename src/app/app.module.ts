@@ -13,6 +13,7 @@ import { ContactComponent } from './components/pages/home/contact/contact.compon
 import { WorkComponent } from './components/pages/work/work.component';
 import { SkillsToolsComponent } from './components/pages/skills-tools/skills-tools.component';
 import { SoftwareProjectsComponent } from './components/pages/software-projects/software-projects.component';
+import { VrArProjectsComponent } from './components/pages/vr-ar-projects/vr-ar-projects.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SoftwareProjectsComponent } from './components/pages/software-projects/
     ContactComponent,
     WorkComponent,
     SkillsToolsComponent,
-    SoftwareProjectsComponent
+    SoftwareProjectsComponent,
+    VrArProjectsComponent
   ],
   imports: [
     BrowserModule,

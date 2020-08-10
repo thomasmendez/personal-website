@@ -1,0 +1,75 @@
+<div>
+    <app-title-header
+        [title]="title"
+    ></app-title-header>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="row" *ngFor="let project of projects; let indexOfelement=index;">
+
+                <div class="col-sm-6 project">
+                    <h2 class="header">{{project.title}}</h2>
+
+                    <p>{{project.description}}</p>
+                    <p><u>My Tasks</u></p>
+                    <ul class="mytasks">
+                        <li *ngFor="let task of project.myTasks">
+                            {{task}}
+                        </li>
+                    </ul>
+                    <p><u>Team Size:</u> {{project.teamSize}}</p>
+                    <div *ngIf=project.teamRoles.length>
+                        <p><u>Team Roles</u></p>
+                        <ul>
+                            <li *ngFor="let role of project.teamRoles">
+                                {{role}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div *ngIf=project.tools.length>
+                        <p><u>Tools:</u> {{project.tools}}</p>
+                    </div>
+                    <div *ngIf=project.platforms>
+                        <p><u>Platform:</u> {{project.platforms}}</p>
+                    </div>
+                    <p><u>Project Duration:</u> {{project.projectDuration}}</p>
+                    <p><u>Project Start Date:</u> {{project.startDate}}</p>
+                    <p><u>Project End Date:</u> {{project.endDate}}</p>
+                    <div *ngIf=project.note>
+                        <p>*<em>{{project.note}}</em>*</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 project text-center">
+                    <div *ngIf="project.videoLink; then showVideo else showImage"></div>
+
+                    <ng-template #showVideo>
+                        <video width="100%" controls>
+                            <source src={{project.videoLink}} type="video/mp4">
+                        <img src={{project.image}}> <!--Should show image if video tag is not supported-->
+                        </video>
+
+                        <div class="button-holder" *ngIf="project.website">
+                            <a class="btn" href={{project.website}} role="button">Website</a>
+                        </div>
+
+                        <div class="button-holder" *ngIf="project.download">
+                            <a class="btn" href={{project.download}} role="button">Download</a>
+                        </div>
+                    </ng-template>
+
+                    <ng-template #showImage>
+                        <img src={{project.image}}>
+                        <div class="button-holder" *ngIf="project.website">
+                            <a class="btn" href={{project.website}} role="button">Website</a>
+                        </div>
+                        <div class="button-holder" *ngIf="project.download">
+                            <a class="btn" href={{project.download}} role="button">Download</a>
+                        </div>
+                    </ng-template>
+                </div>
+
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
