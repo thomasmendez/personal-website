@@ -47,4 +47,22 @@ describe('AppRouting', () => {
     expect(navigateSpy).toHaveBeenCalledWith(['/skills&tools']);
   });
 
+  it('should navigate to software projects', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const router = TestBed.get(Router);
+    const navigateSpy = spyOn(router, 'navigate');
+
+    router.navigate(['/projects/software'])
+    expect(navigateSpy).toHaveBeenCalledWith(['/projects/software']);
+  });
+
+  it('should navigate to software projects', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const router = TestBed.get(Router);
+    const navigateSpy = spyOn(router, 'navigate');
+
+    router.navigate(['/projects/vr-ar'])
+    expect(navigateSpy).toHaveBeenCalledWith(['/projects/vr-ar']);
+  });
+
 });

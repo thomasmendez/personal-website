@@ -26,4 +26,10 @@ describe('TitleHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('component should have a string for image variable', () => {
+    const header = fixture.debugElement.componentInstance;
+    expect(header.image).toEqual('assets/pic.jpeg');
+  })
+
 });

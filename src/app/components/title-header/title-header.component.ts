@@ -13,9 +13,12 @@ export class TitleHeaderComponent implements OnInit {
   @Input()
   public title : string
 
+  public image : string
+
   constructor() { }
 
   ngOnInit(): void {
+    this.image = "assets/pic.jpeg"
   }
 
 }

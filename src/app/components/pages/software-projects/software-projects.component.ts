@@ -42,7 +42,7 @@ export class SoftwareProjectsComponent implements OnInit {
         endDate:"May 2020",
         repository:"https://github.com/thomasmendez/open-lms-blended",
         website:"https://open-lms-blended.org/",
-        image:"assets/pic.png",
+        image:"",
         videoLink:"assets/open-lms-blended-sample.mp4",
         note:""
       },
