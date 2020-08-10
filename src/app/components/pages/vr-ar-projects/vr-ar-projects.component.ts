@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VrArProjects } from '../../../models/VRARProjects';
+import { VrArProjects } from '../../../models/VrArProjects';
 
 @Component({
   selector: 'app-vr-ar-projects',
