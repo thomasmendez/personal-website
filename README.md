@@ -4,7 +4,7 @@ Personal Website made with Angular 10.0.2
 
 ## Overview
 
-This project contains Jenkins and Docker files for CI/CD for longterm use. 
+This project contains Jenkins, Docker, and Ansible files for CI/CD for longterm use. 
 
 ## Setup (Development)
 
