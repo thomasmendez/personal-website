@@ -26,4 +26,8 @@ describe('ContactComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have an array of icons greater than length of 0', () => { 
+    expect(fixture.componentInstance.icons.length).toBeGreaterThan(0);
+  });
 });

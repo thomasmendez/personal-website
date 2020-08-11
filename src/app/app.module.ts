@@ -14,6 +14,7 @@ import { WorkComponent } from './components/pages/work/work.component';
 import { SkillsToolsComponent } from './components/pages/skills-tools/skills-tools.component';
 import { SoftwareProjectsComponent } from './components/pages/software-projects/software-projects.component';
 import { VrArProjectsComponent } from './components/pages/vr-ar-projects/vr-ar-projects.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { VrArProjectsComponent } from './components/pages/vr-ar-projects/vr-ar-p
     WorkComponent,
     SkillsToolsComponent,
     SoftwareProjectsComponent,
-    VrArProjectsComponent
+    VrArProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

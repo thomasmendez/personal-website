@@ -1,18 +1,10 @@
 <h4 class="header">Contact</h4>
 <div class="content">
-    <a href="https://www.linkedin.com/in/thomas-a-mendez">
-        <p class="black">
-            <i class="fa fa-linkedin-square" target="_blank" style="font-size:24px"></i> &nbsp;LinkedIn
-        </p>
-    </a>
-    <a href="https://github.com/thomasmendez">
-        <p class="black">
-            <i class="fa fa-github" style="font-size:24px"></i> &nbsp;Github
-        </p>
-    </a>
-    <a href="mailto:thomasmendez01@gmail.com">
-        <p class="black">
-            <i class="fa fa-envelope-square" style="font-size:24px"></i> &nbsp;Email
-        </p>
-    </a>
+    <div *ngFor="let icon of icons">
+        <a href={{icon.link}}>
+            <p class="black">
+                <i class={{icon.fafa}} style="font-size:24px"></i> &nbsp;{{icon.name}}
+            </p>
+        </a>
+    </div>
 </div>
