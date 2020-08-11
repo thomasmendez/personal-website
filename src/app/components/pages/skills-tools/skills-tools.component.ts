@@ -32,8 +32,8 @@ export class SkillsToolsComponent implements OnInit {
       "Back-End": ["Node.js", " PHP", " Flask", " SQLAlchemy"],
       "Databases": ["MySQL", " PL/SQL", " Postgres", " MongoDB"],
       "Mobile Development": ["iOS (XCode)", " Android (Android Studio)"],
-      "Unit Testing": [ "unittest (Python)", " Mocha", " Chai", " Enzyme", " Junit", " XCTest"],
-      "CI/CL Tools": ["Jenkins", " Gitlab CI", " Github Actions", " Docker"],
+      "Unit Testing": [ "unittest (Python)", " Mocha", " Jasmine", " Chai", " Enzyme", " Junit", " XCTest"],
+      "CI/CD Tools": ["Jenkins", " Gitlab CI", " Github Actions", " Docker"],
       "Data Mining": ["Classification", " Clustering", " Association Analysis", " Dimensionality Reduction"],
       "OS": [ "Windows", " macOS", " Linux (Ubuntu)"]
     }
