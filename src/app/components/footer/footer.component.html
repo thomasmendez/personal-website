@@ -6,7 +6,7 @@
         
         <div class="col-md-7 col-lg-8">
   
-          <p class="text-center text-md-left gray">© {{current_year}} Copyright</p>
+          <p class="text-center text-md-left gray copyright">© {{current_year}} Copyright</p>
   
         </div>
                 
@@ -14,33 +14,18 @@
   
           <div class="text-center text-md-right">
 
-            <ul class="list-unstyled list-inline">
+            <ul class="list-unstyled list-inline icons">
 
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/thomas-a-mendez">
-                    <p class="gray">
-                        <i class="fa fa-linkedin-square" target="_blank" style="font-size:20px"></i>
-                    </p>
-                </a>
-              </li>
-
-              <li class="list-inline-item">
-                <a href="https://github.com/thomasmendez">
-                    <p class="gray">
-                        <i class="fa fa-github" style="font-size:20px"></i>
-                    </p>
-                </a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="mailto:thomasmendez01@gmail.com">
-                    <p class="gray">
-                        <i class="fa fa-envelope-square" style="font-size:20px"></i>
-                    </p>
-                </a>
-              </li>
+                <li *ngFor="let icon of icons" class="list-inline-item icon">
+                    <a href={{icon.link}}>
+                        <p class="gray">
+                            <i class={{icon.fafa}} style="font-size:20px"></i>
+                        </p>
+                    </a>
+                </li>
 
             </ul>
+
           </div>
   
         </div>
