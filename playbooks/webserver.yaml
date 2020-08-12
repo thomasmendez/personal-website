@@ -2,34 +2,55 @@
 - hosts: webservers
   become: true
   vars:
+    export_port: 81
+    container_port: 80
     container_name: website
     container_image: thomasmendez01/personal-website 
-
   tasks:
+
+    - name: Update the repository cache and update package "nginx" to latest version using default release squeeze-backport
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
 
     - name: Install UFW.
       apt:
         name: ufw
         state: present
-
     - name: Setup default firewall rules.
       command: "ufw {{ item }}"
       with_items:
         - allow OpenSSH
-        - allow http
-
+        - allow 'Nginx Full'
+        - allow {{ external_port }}
     - name: UFW - Deny all other incoming traffic by default
       ufw:
         state: enabled
         policy: deny
         direction: incoming
-
     - name: Start UFW.
-      command: ufw --force enable # Force flag used to skip `are you sure` query.
+      command: ufw --force enable
+
+    - name: Add Cerbot Repository
+      apt_repository:
+        repo: ppa:certbot/certbot
+    - name: Update and upgrade apt packages
+      become: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+    - name: Install Certbot’s Nginx Package 
+      apt: 
+        name: python-certbot-nginx
+        update_cache: yes
 
     - name: Install aptitude using apt
       apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
-
     - name: Install required system packages
       apt: name={{ item }} state=latest update_cache=yes
       loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']
@@ -38,23 +59,18 @@
       apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
-
     - name: Add Docker Repository
       apt_repository:
         repo: deb https://download.docker.com/linux/ubuntu xenial stable
         state: present
-
     - name: Update apt and install docker-ce
       apt: update_cache=yes name=docker-ce state=latest
-
     - name: Install Docker Module for Python
       pip:
         name: docker
-
     - name: Pull Docker image
       docker_image:
         name: "{{ container_image }}"
         source: pull
-    
     - name: Run Docker container on http port
-      command: docker run -d -p 80:80 --name {{ container_name }} {{ container_image }}
+      command: docker run -d -p {{ export_port }}:{{ container_port }} --name {{ container_name }} {{ container_image }}
